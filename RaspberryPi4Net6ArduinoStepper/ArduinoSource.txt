@@ -1,0 +1,56 @@
+#include <Stepper.h>
+
+const float stepsPerRevolution = 2048.0 ;  
+
+const float resolution  = 5.625/64; 
+int step_degree(float desired_degree){
+    return (stepsPerRevolution/360) * desired_degree;
+}
+
+Stepper myStepper(stepsPerRevolution, 9, 11, 10, 8);
+
+
+void setup() {
+
+  myStepper.setSpeed(12);
+
+   pinMode(6, INPUT);
+   pinMode(7, INPUT);
+  
+  Serial.begin(9600);
+}
+
+void loop() {
+ 
+  int valShow = digitalRead(6);
+  if(valShow){
+    showFlag();
+  }
+  
+  int valHide = digitalRead(7);
+  if(valHide){
+    hideFlag();
+  }
+
+
+}
+
+bool flagIsVisible=false;
+
+void showFlag(){
+  if(flagIsVisible){
+    return;
+  }
+    
+
+  flagIsVisible=true;
+  myStepper.step((step_degree(90)));
+}
+
+void hideFlag(){
+  if(flagIsVisible == false)
+    return;
+
+  flagIsVisible=false;  
+  myStepper.step(-(step_degree(90)));
+}

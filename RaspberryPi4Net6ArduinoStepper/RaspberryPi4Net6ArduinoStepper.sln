@@ -5,6 +5,11 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaspberryPi4Net6ArduinoStepper", "RaspberryPi4Net6ArduinoStepper.csproj", "{B84C1163-DBFA-466D-9A9F-A19359AF7032}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B0E72B9-B8AA-444A-B8E7-305E02DE0DD3}"
+	ProjectSection(SolutionItems) = preProject
+		ArduinoSource.txt = ArduinoSource.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
