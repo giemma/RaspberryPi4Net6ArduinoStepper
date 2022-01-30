@@ -1,0 +1,17 @@
+﻿<Window x:Class="RaspberryPi4Net6ArduinoStepper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RaspberryPi4Net6ArduinoStepper"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" x:Name="BtnShow" Content="Show" Click="BtnShow_Click" Margin="20"   />
+        <Button Grid.Column="1" x:Name="BtnHide" Content="Hide" Click="BtnHide_Click" Margin="20"  />
+    </Grid>
+</Window>
